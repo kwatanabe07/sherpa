@@ -1,0 +1,197 @@
+extends _layout.pug
+
+block vars
+  include _config.pug
+  - var img_path = level + image_path
+
+block contents
+  .lp-content
+    //- img(src= img_path + "?????.jpg" + cmsParam alt="")
+    //- パス後ろの cmsParam は消さずに制作してください。
+    //- （CMS用のパラメータ。パスを記入する際必ず必要... img/css/js）
+
+    link(rel="stylesheet" href=css_path + "index.css" + cmsParam)
+
+    section#sherpa_mvArea
+      .mv
+        h1
+          img(src=`${img_path}mv_pc.jpg`, alt="SHERPA JACKET 2020 FALL/WINTER").only-pc
+          img(src=`${img_path}mv_sp.jpg`, alt="SHERPA JACKET 2020 FALL/WINTER").only-sp
+        .bg
+      .leadArea
+        h2.leadTitle 真冬でも活躍するシェルパジャケット
+        p.text_desc 定番のデニムジャケットに防寒機能を加えたリーバイス<sup>®</sup>のシェルパジャケット。<br>やわらかなボア裏地とデニムを組み合わせたデザインは<br>スタイリッシュな見た目と保温性、そのどちらも両立します。<br>袖を通した時に感じる包み込むような暖かさは、まさにシェルパジャケットならではの魅力です。<br>女性はメンズジャケットを着用すればオーバーサイズのコーデが出来上がります。
+
+    section#sherpa_itemsArea
+      .itemBlock
+        .itemBlockInner
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide.img
+                img(src=`${img_path}item_01_1.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_01_2.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_01_3.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_01_4.jpg${cmsParam}`, alt="")
+            .swiper-pagination
+        .textFrame
+          .textFrameInner
+            span.gender MEN
+            h3.name TYPEⅢ<br>シェルパトラッカージャケット<br>SPLITSVILLE SHERP+C
+            p.price ¥13,200
+              span （税込）
+            .descBlock
+              p.desc 定番のTYPEⅢデニムジャケットに防寒機能を追加したシェルパジャケット。定番の形なので長年着用できるのも嬉しいポイントです。サイズ次第で女性の着用も出来ます。
+              .checkButton
+                a(href="$url('Product-Show','pid','268720003')$") CHECK
+      .itemBlock.reverse
+        .itemBlockInner
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide.img
+                img(src=`${img_path}item_02_1.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_02_2.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_02_3.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_02_4.jpg${cmsParam}`, alt="")
+            .swiper-pagination
+        .textFrame
+          .textFrameInner
+            span.gender MEN
+            h3.name HOODED HYBRD<br>シェルパトラッカージャケット<br>SNUGGLES
+            p.price ¥17,600
+              span （税込）
+            .descBlock
+              p.desc シェルパ生地を胸元から袖にかけてあしらった見た目も暖かいデザイン。フード付きのシェルパジャケットはカジュアルなコーディネートに合わせやすくOFFスタイル、カジュアルな出勤時に最適です。
+              .checkButton
+                a(href="$url('Product-Show','pid','268720003')$") CHECK
+
+      .itemBlock
+        .itemBlockInner
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide.img
+                img(src=`${img_path}item_03_1.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_03_2.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_03_3.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_03_4.jpg${cmsParam}`, alt="")
+            .swiper-pagination
+        .textFrame
+          .textFrameInner
+            span.gender MEN
+            h3.name HOODED HYBRD<br>シェルパトラッカージャケット<br>CUDDLES
+            p.price ¥17,600
+              span （税込）
+            .descBlock
+              p.desc コーディネートを引き締めてくれるブラックデニムのシェルパ ジャケット。1967年発売のデニムジャケットをベースに、大胆に胸元から袖にかけてアレンジしています。
+              .checkButton
+                a(href="$url('Product-Show','pid','268720003')$") CHECK
+      .itemBlock.reverse
+        .itemBlockInner
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide.img
+                img(src=`${img_path}item_04_1.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_04_2.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_04_3.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_04_4.jpg${cmsParam}`, alt="")
+            .swiper-pagination
+        .textFrame
+          .textFrameInner
+            span.gender MEN
+            h3.name TYPEⅢ<br>シェルパトラッカージャケット<br>MAYZE SHERPA TRUCKER
+            p.price ¥17,600
+              span （税込）
+            .descBlock
+              p.desc 1967年のデニムジャケットがベースですが、昔ながらのシェイプよりもやや大きめ、よりシェイプはフィットはやや大きめ、長め、ゆったりめになっています。女性にもおすすめ。
+              .checkButton
+                a(href="$url('Product-Show','pid','268720003')$") CHECK
+
+      .itemBlock
+        .itemBlockInner
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide.img
+                img(src=`${img_path}item_05_1.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_05_2.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_05_3.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_05_4.jpg${cmsParam}`, alt="")
+            .swiper-pagination
+        .textFrame
+          .textFrameInner
+            span.gender MEN
+            h3.name TYPE II<br>シェルパトラッカージャケット<br>LMC ICE PICK
+            p.price ¥27,500
+              span （税込）
+            .descBlock
+              p.desc Type IIトラッカージャケットをヴィンテージテイストで仕上げた、シェルパジャケット。プリーツディテールと2フラップポケットが特徴的です。素地はハイクオリティなコットンデニムを使用していて、色褪せ感のあるライトウォッシュ加工がポイントです。
+              .checkButton
+                a(href="$url('Product-Show','pid','268720003')$") CHECK
+      .itemBlock.reverse
+        .itemBlockInner
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide.img
+                img(src=`${img_path}item_06_1.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_06_2.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_06_3.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_06_4.jpg${cmsParam}`, alt="")
+            .swiper-pagination
+        .textFrame
+          .textFrameInner
+            span.gender MEN
+            h3.name CORD<br>シェルパトラッカージャケット<br>GRAPE JAM
+            p.price ¥38,500
+              span （税込）
+            .descBlock
+              p.desc ヴィンテージのシェルパジャケットを今年のVINTAGE CLOTHINGテーマに合わせてパープルにアレンジしました。プラッシュコーデュロイとフェイクファーの襟。ややオーバーサイズのフィットになっています。
+              .checkButton
+                a(href="$url('Product-Show','pid','268720003')$") CHECK
+
+      .itemBlock
+        .itemBlockInner
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide.img
+                img(src=`${img_path}item_07_1.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_07_2.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_07_3.jpg${cmsParam}`, alt="")
+              .swiper-slide.img
+                img(src=`${img_path}item_07_4.jpg${cmsParam}`, alt="")
+            .swiper-pagination
+        .textFrame
+          .textFrameInner
+            span.gender.women WOMEN
+            h3.name EX BF WOOL LINED<br>シェルパトラッカージャケット<br>WILD AND WOOLY
+            p.price ¥17,600
+              span （税込）
+            .descBlock
+              p.desc ゆったりとしたシルエットと細長い裾で、オーバーサイズに見えるようにデザインされています。着心地の良いソフトなシェルパ素材を使用しています。袖にはキルティングの裏地を付けて暖かさをさらにアップ。
+              .checkButton
+                a(href="$url('Product-Show','pid','268720003')$") CHECK
+
+    #sherpa_allItemsArea
+      h3.allItems_heading ALL SHERPA JACKET
+      .checkButtonsInner
+        .checkButton
+          a(href="$url('Product-Show','pid','268720003')$") MEN
+        .checkButton
+          a(href="$url('Product-Show','pid','268720003')$") WOMEN

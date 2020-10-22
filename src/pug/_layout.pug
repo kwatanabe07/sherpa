@@ -1,0 +1,45 @@
+doctype html
+block vars
+//if lt IE 7
+  html.ie6.oldie(lang="ja")  
+//if IE 7
+  html.ie7.oldie(lang="ja")  
+//if IE 8
+  html.ie8.oldie(lang="ja")  
+// [if gt IE 8] <!
+html(lang="ja")
+  // <![endif]
+  head
+    include include/_head.pug
+    body.LeviJP
+      include include/_header.pug
+
+        //
+        // ここからコンテンツ
+        //
+
+        // font
+        script.
+          (function(d) {
+            var config = {
+              kitId: 'apz6siq',
+              scriptTimeout: 3000,
+              async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+          })(document);
+        // CSS
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css")
+        block contents
+        // js
+        .
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+        script(src=js_path + "script.js" + cmsParam)
+        //
+        // ここまでコンテンツ
+        //
+
+        #backToTop
+          a.back-to-top(href="#" title="Go to top")
+
+      include include/_footer.pug

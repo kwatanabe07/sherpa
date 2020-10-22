@@ -1,0 +1,24 @@
+vwpc(v)
+    unit( (v / 1440) * 100, 'vw' )
+vwsp(v)
+    unit( (v / 750) * 100, 'vw' )
+vwmd(v)
+    unit( (v / 1000) * 100, 'vw' )
+
+all-pc()
+    @media print, screen and (min-width 769px)
+        {block}
+
+pc()
+    @media screen and (min-width 769px) and (max-width 1366px)
+        {block}
+
+sp()
+    @media screen and (max-width 768px)
+        {block}
+
+md()
+    @media screen and (max-width 1000px)
+        {block}
+
+
