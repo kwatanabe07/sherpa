@@ -14,13 +14,15 @@ block contents
 
     section#sherpa_mvArea
       .mv
-        h1
-          img(src=`${img_path}mv_pc.jpg`, alt="SHERPA JACKET 2020 FALL/WINTER").only-pc
-          img(src=`${img_path}mv_sp.jpg`, alt="SHERPA JACKET 2020 FALL/WINTER").only-sp
+        img(src=`${img_path}mv_pc.jpg`, alt="SHERPA JACKET 2020 FALL/WINTER").mvImage.only-pc
+        img(src=`${img_path}mv_sp.jpg`, alt="SHERPA JACKET 2020 FALL/WINTER").mvImage.only-sp
+        h1.title
+          img(src=`${img_path}title_pc.svg`, alt="SHERPA JACKET 2020 FALL/WINTER").only-pc
+          img(src=`${img_path}title_sp.svg`, alt="SHERPA JACKET 2020 FALL/WINTER").only-sp
         .bg
       .leadArea
         h2.leadTitle 真冬でも活躍するシェルパジャケット
-        p.text_desc 定番のデニムジャケットに防寒機能を加えたリーバイス<sup>®</sup>のシェルパジャケット。<br>やわらかなボア裏地とデニムを組み合わせたデザインは<br>スタイリッシュな見た目と保温性、そのどちらも両立します。<br>袖を通した時に感じる包み込むような暖かさは、まさにシェルパジャケットならではの魅力です。<br>女性はメンズジャケットを着用すればオーバーサイズのコーデが出来上がります。
+        p.text_desc 定番のデニムジャケットに防寒機能を加えたリーバイス<sup>®</sup>のシェルパジャケット。<br class="only-pc">やわらかなボア裏地とデニムを組み合わせたデザインは<br class="only-pc">スタイリッシュな見た目と保温性、そのどちらも両立します。<br class="only-pc">袖を通した時に感じる包み込むような暖かさは、まさにシェルパジャケットならではの魅力です。<br class="only-pc">女性はメンズジャケットを着用すればオーバーサイズのコーデが出来上がります。
 
     section#sherpa_itemsArea
       .itemBlock
@@ -90,7 +92,7 @@ block contents
             p.price ¥17,600
               span （税込）
             .descBlock
-              p.desc コーディネートを引き締めてくれるブラックデニムのシェルパ ジャケット。1967年発売のデニムジャケットをベースに、大胆に胸元から袖にかけてアレンジしています。
+              p.desc コーディネートを引き締めてくれるブラックデニムのシェルパジャケット。1967年発売のデニムジャケットをベースに、大胆に胸元から袖にかけてアレンジしています。
               .checkButton
                 a(href="$url('Product-Show','pid','268720003')$") CHECK
       .itemBlock.reverse

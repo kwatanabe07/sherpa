@@ -168,36 +168,31 @@ section[id*="sherpa_"]
   .mv
     width 100%
     position relative
-    &:before
-      content ""
-      display block
-      width 100%
-      height 100%
-      background #d1a87d
+    .mvImage
+      opacity: 0
+      transform scale(1.1)
+      transition opacity .5s,transform .5s
+      &.active
+        opacity: 10
+        transform scale(1)
+    .title
+      width vwpc(283)
       position absolute
-      top 0
-      left 0
-      transform translateX(0)
-      transition .5s
-      z-index 3
-    &:after
-      content ""
-      display block
-      width 100%
-      height 100%
-      background #fbf6e7
-      position absolute
-      top 0
-      left 0
-      transform translateX(0)
-      transition .5s
-      z-index 2
-    &.active_first
-      &:before
-        transform translateX(100%)
-    &.active_second
-      &:after
-        transform translateX(100%)
+      top 50%
+      left 50%
+      opacity: 0
+      transform translate(-50%,-30%)
+      transition opacity .5s,transform .5s
+      +sp()
+        width vwsp(639)
+        top inherit
+        bottom vwsp(80)
+        transform translate(-50%,30%)
+      &.active
+        opacity: 10
+        transform translate(-50%,-50%)
+        +sp()
+          transform translate(-50%,0)
     img
       width 100%
       p
@@ -240,7 +235,7 @@ section[id*="sherpa_"]
       margin-bottom vwCnt(150)
     +sp()
       display block
-      margin-bottom vwsp(120)
+      margin-bottom vwsp(150)
     &.reverse
       flex-direction: row-reverse
       .itemBlockInner
@@ -253,6 +248,16 @@ section[id*="sherpa_"]
     .itemBlockInner
       margin-right: 85px
       position relative
+      opacity 0
+      transition opacity .5s
+      &.active
+        opacity 10
+        &:after
+          top 30px
+          right -30px
+          +sp()
+            top vwsp(42)
+            right 0
       +cnt()
         margin-right: vwCnt(85)
       +sp()
@@ -265,9 +270,10 @@ section[id*="sherpa_"]
         background url('../image/bg_items.png') no-repeat
         background-size 100%
         position absolute
-        top 30px
-        right -30px
+        top 0
+        right 0
         z-index 0
+        transition top .5s,right .5s
         +cnt()
           width vwCnt(520)
           height vwCnt(520)
@@ -276,8 +282,8 @@ section[id*="sherpa_"]
         +sp()
           width vwsp(708)
           height vwsp(708)
-          top vwsp(42)
-          right 0
+          top vwsp(0)
+          right vwsp(42)
     .swiper-container
       width 520px
       position relative
@@ -309,6 +315,10 @@ section[id*="sherpa_"]
     .textFrame
       width 440px
       position relative
+      opacity 0
+      transition opacity .5s
+      &.active
+        opacity 10
       +cnt()
         width vwCnt(440)
       +sp()
@@ -396,35 +406,22 @@ section[id*="sherpa_"]
             +sp()
               height vwsp(90)
               overflow-x visible
-            +all-pc()
-              &:before
-                content ""
-                display block
-                width 100%
-                height 100%
-                background #8b5534
-                position absolute
-                top 0
-                right 100%
-                z-index 0
             &:hover
               &:before
-                animation scale-x-zero-to-max .5s linear .1s 1 forwards
-                animation-iteration-count 1
-                @keyframes scale-x-zero-to-max {
-                    0% {
-                      right 100%
-                    }
-                    50% {
-                      right 0
-                    }
-                    70% {
-                      right 0
-                    }
-                    100% {
-                      right -100%
-                    }
-                }
+                opacity: 1;
+                transform: scale(1, 1);
+            &:before
+              display block
+              content ""
+              width 100%
+              height 100%
+              opacity: 0;
+              background: Rgba(251,246,231,.3);
+              transform: scale(0.1, 0.1);
+              transition: opacity .5s,transform .5s
+              position absolute
+              top 0
+              left 0
             &:after
               display block
               width 10px
@@ -512,35 +509,22 @@ section[id*="sherpa_"]
         width 100%
         height vwsp(100)
         overflow-x visible
-      +all-pc()
-        &:before
-          content ""
-          display block
-          width 100%
-          height 100%
-          background #8b5534
-          position absolute
-          top 0
-          right 100%
-          z-index 0
       &:hover
         &:before
-          animation scale-x-zero-to-max .5s linear .1s 1 forwards
-          animation-iteration-count 1
-          @keyframes scale-x-zero-to-max {
-              0% {
-                right 100%
-              }
-              50% {
-                right 0
-              }
-              70% {
-                right 0
-              }
-              100% {
-                right -100%
-              }
-          }
+          opacity: 1;
+          transform: scale(1, 1);
+      &:before
+        display block
+        content ""
+        width 100%
+        height 100%
+        opacity: 0;
+        background: Rgba(251,246,231,.3);
+        transform: scale(0.1, 0.1);
+        transition: opacity .5s,transform .5s
+        position absolute
+        top 0
+        left 0
       &:after
         display block
         width 10px
