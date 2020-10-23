@@ -1,3 +1,5 @@
+
+
 $(window).scroll(function () {
     itemFadeIn();
 });
@@ -29,23 +31,24 @@ function animateMv() {
 
 function itemFadeIn() {
     if ($('#sherpa_itemsArea').length) {
+        const w = $(window).width();
         const item = '.itemBlock .itemBlockInner';
         $(item).each(function () {
-            var elmPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elmPos - windowHeight) {
+            let elmPos = $(this).offset().top;
+            let scroll = $(window).scrollTop();
+            let windowHeight = $(window).height();
+            let buffer;
+            if (w <= 768) {
+                buffer = 0;
+            } else {
+                buffer = 300;
+            }
+            if (scroll > elmPos - windowHeight + buffer) {
                 $(this)
                     .delay(400)
                     .queue(function (next) {
                         $(this).addClass('active');
-                        next();
-                    });
-                $(this)
-                    .next('.textFrame')
-                    .delay(900)
-                    .queue(function (next) {
-                        $(this).addClass('active');
+                        $(this).next('.textFrame').addClass('active');
                         next();
                     });
             }

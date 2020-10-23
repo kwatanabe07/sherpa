@@ -407,21 +407,7 @@ section[id*="sherpa_"]
               height vwsp(90)
               overflow-x visible
             &:hover
-              &:before
-                opacity: 1;
-                transform: scale(1, 1);
-            &:before
-              display block
-              content ""
-              width 100%
-              height 100%
-              opacity: 0;
-              background: Rgba(251,246,231,.3);
-              transform: scale(0.1, 0.1);
-              transition: opacity .5s,transform .5s
-              position absolute
-              top 0
-              left 0
+              background #392720
             &:after
               display block
               width 10px
@@ -493,7 +479,7 @@ section[id*="sherpa_"]
       background #392720
       text-align center
       position relative
-      transition .5s
+      transition opacity .5s
       overflow-x hidden
       &:not(:last-of-type)
         margin-right 40px
@@ -510,21 +496,8 @@ section[id*="sherpa_"]
         height vwsp(100)
         overflow-x visible
       &:hover
-        &:before
-          opacity: 1;
-          transform: scale(1, 1);
-      &:before
-        display block
-        content ""
-        width 100%
-        height 100%
-        opacity: 0;
-        background: Rgba(251,246,231,.3);
-        transform: scale(0.1, 0.1);
-        transition: opacity .5s,transform .5s
-        position absolute
-        top 0
-        left 0
+        opacity .7
+
       &:after
         display block
         width 10px
