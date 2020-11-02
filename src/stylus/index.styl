@@ -399,7 +399,7 @@ section[id*="sherpa_"]
             background #d1a87d
             text-align center
             position relative
-            transition .5s
+            transition .2s
             overflow-x hidden
             +cnt()
               height vwCnt(60)
@@ -477,9 +477,10 @@ section[id*="sherpa_"]
       width 320px
       height 60px
       background #392720
+      border 2px solid transparent
       text-align center
       position relative
-      transition all .5s
+      transition all .2s
       overflow-x hidden
       &:not(:last-of-type)
         margin-right 40px
@@ -496,7 +497,14 @@ section[id*="sherpa_"]
         height vwsp(100)
         overflow-x visible
       &:hover
-        background #f8e498
+        background transparent
+        border 2px solid #392720
+        &:after
+          background url('../image/button_arrow_hoverd.png') no-repeat
+          background-size 100%
+          background-position center
+        a
+          color #392720
 
       &:after
         display block
@@ -510,6 +518,7 @@ section[id*="sherpa_"]
         top 50%
         transform translateY(-50%)
         right 16px
+        transition all .2s
         +cnt()
           width vwCnt(10)
           height vwCnt(16)

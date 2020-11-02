@@ -41,7 +41,7 @@ function itemFadeIn() {
             if (w <= 768) {
                 buffer = 0;
             } else {
-                buffer = 300;
+                buffer = 0;
             }
             if (scroll > elmPos - windowHeight + buffer) {
                 $(this)
