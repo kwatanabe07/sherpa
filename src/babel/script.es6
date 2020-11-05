@@ -11,7 +11,9 @@ $(window).on('load', function () {
 
 function runSwiper() {
     var swiper = new Swiper('.swiper-container', {
-        autoplay: true,
+        autoplay: {
+            disableOnInteraction: false
+        },
         speed: 500,
         loop: true,
         pagination: {
